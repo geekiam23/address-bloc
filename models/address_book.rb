@@ -19,6 +19,10 @@ class AddressBook
         @entries.delete(delete_entry)
     end
 
+    def nuked
+        @entries.clear
+    end
+
     def add_entry(name, phone_number, email)
         index = 0
         @entries.each do |entry|
@@ -68,6 +72,4 @@ class AddressBook
 
         return nil
     end
-
-
 end
